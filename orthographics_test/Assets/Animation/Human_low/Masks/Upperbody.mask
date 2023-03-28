@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Upperbody
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: ArmLow
+    m_Weight: 1
+  - m_Path: ArmLow/Hip
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Head
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Head/Head_end
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Left
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Left/Upperarm.Left
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Left/Upperarm.Left/Forearm.Left
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Left/Upperarm.Left/Forearm.Left/Hand.Left
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Left/Upperarm.Left/Forearm.Left/Hand.Left/Hand.Left_end
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Right
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Right/Upperarm.Right
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Right/Upperarm.Right/Forearm.Right
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Right/Upperarm.Right/Forearm.Right/Hand.Right
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Back/Shoulder.Right/Upperarm.Right/Forearm.Right/Hand.Right/Hand.Right_end
+    m_Weight: 1
+  - m_Path: ArmLow/Hip/Hip.Left
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Left/Thigh.Left
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Left/Thigh.Left/Shin.Left
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Left/Thigh.Left/Shin.Left/Foot.Left
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Left/Thigh.Left/Shin.Left/Foot.Left/Foot.Left_end
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Right
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Right/Thigh.Right
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Right/Thigh.Right/Shin.Right
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Right/Thigh.Right/Shin.Right/Foot.Right
+    m_Weight: 0
+  - m_Path: ArmLow/Hip/Hip.Right/Thigh.Right/Shin.Right/Foot.Right/Foot.Right_end
+    m_Weight: 0
+  - m_Path: HumanLow
+    m_Weight: 1
