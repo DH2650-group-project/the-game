@@ -245,3 +245,143 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 135,127905 seconds.
+  path: Assets/Textures/Cyborg_texture.png
+  artifactKey: Guid(4210ad0e691f475658daeb1fd2bede1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cyborg_texture.png using Guid(4210ad0e691f475658daeb1fd2bede1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80023eab9582449797c606989e3ca2f3') in 0,048479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1,865231 seconds.
+  path: Assets/Textures/Brick
+  artifactKey: Guid(e888d5aedb59f924995216e19ff984b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick using Guid(e888d5aedb59f924995216e19ff984b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b16af3bc9b6758db627ea68929a4fcf5') in 0,000524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,062024 seconds.
+  path: Assets/Textures/Brick/Ground_01.png
+  artifactKey: Guid(a0b474f7c1a891ecb8cba8777140018e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_01.png using Guid(a0b474f7c1a891ecb8cba8777140018e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4808ba6371d27cb4c1866aec151dc92e') in 0,012719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000018 seconds.
+  path: Assets/Textures/Brick/Ground_04.png
+  artifactKey: Guid(8d745d29b0e6067e2af8367a48d8f91b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_04.png using Guid(8d745d29b0e6067e2af8367a48d8f91b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fbca1db20485d702568ed81169dd0bc') in 0,008022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000026 seconds.
+  path: Assets/Textures/Brick/Ground_02.png
+  artifactKey: Guid(d88a8481ca701beb8b9febe42242da21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_02.png using Guid(d88a8481ca701beb8b9febe42242da21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba1127399248c8459e59ac7d57805840') in 0,011724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000022 seconds.
+  path: Assets/Textures/Brick/Ground_02_Nrm.png
+  artifactKey: Guid(a3aecff4e08064977ab4a80c06bed7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_02_Nrm.png using Guid(a3aecff4e08064977ab4a80c06bed7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c68abb31ccc3b4584f43d4d627b06b96') in 0,010081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000025 seconds.
+  path: Assets/Textures/Brick/Ground_03_Nrm.png
+  artifactKey: Guid(d5a46fc427b6b9eabb66073c6bc4f8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_03_Nrm.png using Guid(d5a46fc427b6b9eabb66073c6bc4f8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd33903ddb97ff1a1fc31fd7ab54e55fd') in 0,009706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000026 seconds.
+  path: Assets/Textures/Brick/Ground_03.png
+  artifactKey: Guid(f0b68731617173a548eb478c1ca660c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Brick/Ground_03.png using Guid(f0b68731617173a548eb478c1ca660c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c18fa5c046541d01d9d989528ade87') in 0,009103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6,240565 seconds.
+  path: Assets/Textures/Grass/ground_grass_gen_01.png
+  artifactKey: Guid(f1a3f7f8cc369706ca82404f42eba60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Grass/ground_grass_gen_01.png using Guid(f1a3f7f8cc369706ca82404f42eba60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac6d4b9fea5542e5757a21dd101bd2c1') in 0,008779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000021 seconds.
+  path: Assets/Textures/Grass/ground_grass_gen_05.png
+  artifactKey: Guid(a492042ff557a015da716aec597c84ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Grass/ground_grass_gen_05.png using Guid(a492042ff557a015da716aec597c84ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303407c76a15073d0792fbd98e2a3c89') in 0,018109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000021 seconds.
+  path: Assets/Textures/Grass/ground_grass_gen_04.png
+  artifactKey: Guid(df2ae3f36fb1633188b1fe7e9ed43a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Grass/ground_grass_gen_04.png using Guid(df2ae3f36fb1633188b1fe7e9ed43a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3583feb4413a01b84b174bc38f0ca2b9') in 0,012205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000016 seconds.
+  path: Assets/Textures/Grass/ground_grass_gen_07.png
+  artifactKey: Guid(427c24bd89828ea568ee94e0fa7e0500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Grass/ground_grass_gen_07.png using Guid(427c24bd89828ea568ee94e0fa7e0500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82dccbe876c96e93bf55e7ed7132a7d0') in 0,006216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0,000082 seconds.
+  path: Assets/Textures/Grass/ground_grass_gen_09.png
+  artifactKey: Guid(8db440ee4c44f31b48992184c7ff3016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Grass/ground_grass_gen_09.png using Guid(8db440ee4c44f31b48992184c7ff3016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '345a1bf962d71a0be4d6b931067f5164') in 0,007323 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002315 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/jesper/Repos/the-game/orthographics_test/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/jesper/Repos/the-game/orthographics_test/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0,48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,941 seconds
+Domain Reload Profiling:
+	ReloadAssembly (942ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (703ms)
+			LoadAssemblies (66ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (274ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 2751 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10 unused Assets / (58,0 KB). Loaded Objects now: 3536.
+Memory consumption went from 99,5 MB to 99,4 MB.
+Total: 3,680238 ms (FindLiveObjects: 0,238546 ms CreateObjectMapping: 0,137762 ms MarkObjects: 3,024331 ms  DeleteObjects: 0,277894 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 179,661422 seconds.
+  path: Packages/com.unity.ide.rider/package.json
+  artifactKey: Guid(66c95bb3c74257f41bae2622511dc02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ide.rider/package.json using Guid(66c95bb3c74257f41bae2622511dc02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84743056ad88ae4384470c31d1e72007') in 0,014078 seconds 
