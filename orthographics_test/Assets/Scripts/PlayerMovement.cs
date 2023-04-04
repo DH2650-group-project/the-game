@@ -32,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
             0,
             Input.GetAxisRaw("Vertical") - Input.GetAxisRaw("Horizontal"));
 
+
+        // if shift is pressed, increase speed
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed = 20;
+        else
+            speed = 10;
+
+
         if (rb.velocity.sqrMagnitude > 1)
             rb.velocity = rb.velocity.normalized;
 
@@ -40,5 +48,9 @@ public class PlayerMovement : MonoBehaviour
         transform.LookAt(transform.position + rb.velocity);
 
         anim.SetFloat("speed", rb.velocity.sqrMagnitude);
+
+        // change speed of animation based on speed of player
+        anim.speed = rb.velocity.magnitude / speed;
+
     }
 }
