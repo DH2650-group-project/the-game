@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:orthographics_test/Assets/Prefabs/Weapon.prefab.meta
+guid: 1d96d1f308b620a678a39a03cea36424
+========
 guid: 73bca0c20f85d2141838144e0ed6ba1b
+>>>>>>>> main:orthographics_test/Assets/Prefabs/robot-quadruped.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
