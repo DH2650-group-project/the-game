@@ -45,6 +45,8 @@ public class ProceduralAnimator : MonoBehaviour
 
     private bool full_rest;
 
+    private bool any_leg_moving;
+
     void Start()
     {
 
@@ -65,6 +67,7 @@ public class ProceduralAnimator : MonoBehaviour
 
         lastBodyPosition = transform.position;
         full_rest = true;
+        any_leg_moving = false;
     }
 
     void FixedUpdate()
@@ -75,6 +78,15 @@ public class ProceduralAnimator : MonoBehaviour
             HandleIKMovement();
         else if (!full_rest)
             BackToRest();
+
+        if (limbCount > 3)
+        {
+            Vector3 v1 = limbs[0].IKTarget.position - limbs[1].IKTarget.position;
+            Vector3 v2 = limbs[2].IKTarget.position - limbs[3].IKTarget.position;
+            Vector3 normal = Vector3.Cross(v1, v2);
+            Vector3 up = Vector3.Lerp(transform.up, normal, 1f / (float)(stepSmoothness + 1f));
+            // transform.up = up;
+        }
 
     }
 
@@ -91,7 +103,8 @@ public class ProceduralAnimator : MonoBehaviour
             if (limbs[i].is_moving) continue;
 
             desiredPositions[i] = transform.TransformPoint(limbs[i].defaultPosition);
-            float dist = (desiredPositions[i] + velocity - limbs[i].lastPosition).magnitude;
+            float dist = Vector3.ProjectOnPlane(desiredPositions[i] + velocity * overshootFactor - limbs[i].lastPosition, transform.up).magnitude;
+
             if (dist > greatestDistance)
             {
                 greatestDistance = dist;
@@ -105,12 +118,12 @@ public class ProceduralAnimator : MonoBehaviour
                 limbs[i].IKTarget.position = limbs[i].lastPosition;
 
         // move the selected leg to its "desired" position
-        if (limbToMove != -1)
+        if (limbToMove != -1 && !any_leg_moving)
         {
-            Vector3 targetOffset = desiredPositions[limbToMove] - limbs[limbToMove].IKTarget.position;
-            Vector3 targetPoint = desiredPositions[limbToMove] + velocity.magnitude * overshootFactor * targetOffset;
+            Vector3 targetPoint = desiredPositions[limbToMove] + Mathf.Clamp(velocity.magnitude * overshootFactor, 0f, 1.5f) * (desiredPositions[limbToMove] - limbs[limbToMove].lastPosition) + velocity * overshootFactor;
             targetPoint = RaycastToGround(targetPoint, transform.up);
             targetPoint += transform.up * feetOffset;
+            any_leg_moving = true;
             full_rest = false;
             StartCoroutine(Stepping(limbToMove, targetPoint));
         }
@@ -157,12 +170,14 @@ public class ProceduralAnimator : MonoBehaviour
         for (int i = 0; i < stepSmoothness; i++)
         {
             t = i / (stepSmoothness + 1f);
+
             limbs[limbIndex].IKTarget.position = Vector3.Lerp(startPos, targetPos, t) + Mathf.Sin(t * Mathf.PI) * stepHeight * transform.up;
             yield return new WaitForFixedUpdate();
         }
         limbs[limbIndex].IKTarget.position = targetPos;
         limbs[limbIndex].lastPosition = targetPos;
         limbs[limbIndex].is_moving = false;
+        any_leg_moving = false;
     }
 
     void OnDrawGizmosSelected()

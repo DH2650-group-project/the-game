@@ -1085,7 +1085,7 @@ Transform:
   m_GameObject: {fileID: 7559046225120060788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46967, y: 0.46967, z: 0.46967}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2241707948039630672}
@@ -1113,12 +1113,12 @@ MonoBehaviour:
   - {fileID: 7216536472928109906}
   - {fileID: 7216536471522734193}
   - {fileID: 7216536473031420692}
-  stepSize: 0.9
+  stepSize: 0.3
   feetOffset: 0
-  stepSmoothness: 8
+  stepSmoothness: 6
   stepHeight: 0.21
   raycastRange: 2
-  overshootFactor: 10.06
+  overshootFactor: 3.64
 --- !u!114 &7559046225120060789
 MonoBehaviour:
   m_ObjectHideFlags: 0
