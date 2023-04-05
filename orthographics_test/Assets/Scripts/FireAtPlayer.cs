@@ -22,10 +22,11 @@ public class FireAtPlayer : MonoBehaviour
 
     [SerializeField] float fireRate = 0.5f;
 
+    [SerializeField] int bulletDamage = 1;
+
     [SerializeField] float firingRange = 10f;
 
     [SerializeField] float rotationSpeed = 0.5f;
-
 
     private Vector3 fire_direction;
 
@@ -93,6 +94,8 @@ public class FireAtPlayer : MonoBehaviour
         {
 
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+
+            projectile.GetComponent<DamageProjectile>().damage = bulletDamage;
 
             Vector3 direction = -gun_pivot.transform.right;
             projectile.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
