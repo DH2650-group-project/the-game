@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: human_low_uv Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8619955817058579299, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 9001548356570769881, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -756,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bf1985d953d4142b3e714fe8e74214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7559046225120060788, guid: 73bca0c20f85d2141838144e0ed6ba1b, type: 3}
+  prefab: {fileID: 7559046225120060788, guid: 212874c82fb005140b32c897bc2e2d70, type: 3}
   player: {fileID: 1177453469}
-  count: 10
+  count: 1
   radius: 20
