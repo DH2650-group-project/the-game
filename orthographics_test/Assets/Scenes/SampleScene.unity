@@ -511,6 +511,11 @@ Transform:
   m_Father: {fileID: 1521825198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
+--- !u!4 &1055444545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9001548356570769881, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
+  m_PrefabInstance: {fileID: 2088697499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1102549864
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,11 +967,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425940192}
   m_CullTransparentMesh: 1
---- !u!4 &1461386272 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9001548356570769881, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
-  m_PrefabInstance: {fileID: 2068629765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1521825196
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: -30, y: 26, z: -30}
-  target: {fileID: 1461386272}
+  target: {fileID: 1055444545}
   speed: 10
 --- !u!4 &1521825198
 Transform:
@@ -1015,17 +1015,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2068629765
+--- !u!1001 &2088697499
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1496453593, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1550993688}
     - target: {fileID: 8619955817058579299, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
       propertyPath: m_Name
       value: human_low_uv Variant
