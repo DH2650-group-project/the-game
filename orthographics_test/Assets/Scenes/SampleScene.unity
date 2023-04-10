@@ -1022,6 +1022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1496453593, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1550993688}
     - target: {fileID: 8619955817058579299, guid: a4f9673c5fc4b4b4ab34aa51dcf91aab, type: 3}
       propertyPath: m_Name
       value: human_low_uv Variant
