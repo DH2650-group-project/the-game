@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHp: 100
-  currentHp: 40
-  maxMp: 0
-  currentMp: 0
-  speed: 0
+  currentHp: 100
+  maxMp: 50
+  currentMp: 50
+  speed: 2
