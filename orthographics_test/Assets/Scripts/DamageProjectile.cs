@@ -7,6 +7,10 @@ public class DamageProjectile : MonoBehaviour
 
     public int damage = 1;
 
+    // When the projectile is spawned by an enemy, it should only hit the player
+    // When the projectile is spawned by the player, it should only hit enemies
+    public LayerMask targetableLayerMask;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,11 +23,10 @@ public class DamageProjectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // if gameobject has health component, damage it
-
-        if (other.gameObject.GetComponent<Health>())
+        // TODO: if other is a targetable object, deal damage to it
+        if (targetableLayerMask == (targetableLayerMask | (1 << other.gameObject.layer)))
         {
-            other.gameObject.GetComponent<Health>().TakeDamage(damage);
+            other.GetComponent<CharacterStats>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

@@ -96,6 +96,7 @@ public class FireAtPlayer : MonoBehaviour
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
             projectile.GetComponent<DamageProjectile>().damage = bulletDamage;
+            projectile.GetComponent<DamageProjectile>().targetableLayerMask = LayerMask.GetMask("Player");
 
             Vector3 direction = -gun_pivot.transform.right;
             projectile.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;

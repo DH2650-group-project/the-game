@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public Health health;
+    public CharacterStats stats;
 
     public void SetMaxHealth(int health)
     {
@@ -26,16 +26,17 @@ public class HealthBar : MonoBehaviour
 
     void Start()
     {
-        if (health == null)
+        if (stats == null)
         {
             gameObject.SetActive(false);
             return;
         }
-        SetMaxHealth(health.maxHealth);
+        SetMaxHealth(stats.maxHp);
+        SetHealth(stats.currentHp);
     }
 
     void Update()
     {
-        SetHealth(health.currentHealth);
+        SetHealth(stats.currentHp);
     }
 }
