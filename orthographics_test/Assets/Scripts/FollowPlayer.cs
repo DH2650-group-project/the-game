@@ -30,9 +30,17 @@ public class FollowPlayer : MonoBehaviour
 
         Quaternion look_at_player = Quaternion.LookRotation(direction);
 
+        Transform old_transform = transform;
+
+
         rb.MoveRotation(Quaternion.Slerp(transform.rotation, look_at_player, angular_speed * Time.fixedDeltaTime));
 
-        rb.MovePosition(transform.position + move_speed * Time.fixedDeltaTime * direction.normalized);
 
+        // if rotation is less than 30 degrees, move forward
+        // otherwise, don't move and wait for rotation to be less than 20 degrees
+        if (Quaternion.Angle(old_transform.rotation, look_at_player) < 35f)
+        {
+            rb.MovePosition(transform.position + move_speed * Time.fixedDeltaTime * direction.normalized);
+        }
     }
 }

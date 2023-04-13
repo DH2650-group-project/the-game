@@ -9,8 +9,8 @@ public class CharacterStats : MonoBehaviour
     #region Read data from SO
     public int maxHp
     {
-        get { if (characterData != null) return characterData.maxHp; else return 0;}
-        set { characterData.maxHp = value;}
+        get { if (characterData != null) return characterData.maxHp; else return 0; }
+        set { characterData.maxHp = value; }
 
     }
     public int currentHp
@@ -44,4 +44,43 @@ public class CharacterStats : MonoBehaviour
     }
 
     #endregion
+
+    public void TakeDamage(int damage)
+    {
+        currentHp -= damage;
+        if (currentHp <= 0)
+        {
+            currentHp = 0;
+            // TODO: Send message to gameobject that it should die
+        }
+    }
+
+    public void Heal(int healAmount)
+    {
+        currentHp += healAmount;
+        if (currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
+    }
+
+    public void UseMp(int useAmount)
+    {
+        currentMp -= useAmount;
+        if (currentMp < 0)
+        {
+            currentMp = 0;
+        }
+    }
+
+    public void RestoreMp(int restoreAmount)
+    {
+        currentMp += restoreAmount;
+        if (currentMp > maxMp)
+        {
+            currentMp = maxMp;
+        }
+    }
+
+
 }
