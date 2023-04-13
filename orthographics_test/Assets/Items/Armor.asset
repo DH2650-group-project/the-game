@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0803f4eef0c3b8e46a532808c82e41ed, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: b89629b2b48c2124abfdbe78ce83cdc7, type: 3}
+  m_Name: Armor
   m_EditorClassIdentifier: 
-  maxHp: 100
-  currentHp: 40
-  maxMp: 0
-  currentMp: 0
-  speed: 0
-  inventory1: {fileID: 11400000, guid: 81b381ecfe1b5fd45814088b035f351d, type: 2}
+  ItemName: Armor
+  Icon: {fileID: 21300000, guid: 172f06dfaa15ebc4a86204f44021cde3, type: 3}

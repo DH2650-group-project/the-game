@@ -22,11 +22,8 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField]
     private float laserEnableTime = 0.05f;
     private float laserTimer = 0.0f;
-
-    [SerializeField]
-    [Range(0.1f, 10.0f)]
-    private float fireRate = 0.5f;
-
+ 
+    private float fireRate;
     private float fireRateTimer = 0.0f;
 
     // Start is called before the first frame update
@@ -37,6 +34,7 @@ public class PlayerWeapon : MonoBehaviour
         laserLight = firePoint.GetComponent<Light>();
         laserLight.enabled = false;
         audioSource = GetComponent<AudioSource>();
+        fireRate = 1/GetComponent<CharacterStats>().inventory1.cdDuration;
     }
 
     private void Shoot()

@@ -4944,7 +4944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 863ff954206bb954ea17bb4c01869157, type: 3}
       propertyPath: m_Name
-      value: human_low_uv
+      value: human_low_uv Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1923111241245770850, guid: 863ff954206bb954ea17bb4c01869157, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5224,23 +5224,6 @@ MonoBehaviour:
   dashDuration: 0.1
   dashSpeed: 30
   dashEffect: {fileID: 87993953}
---- !u!114 &8890481650131467408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8619955817058579299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ad6671dea734d4e95c1070154e68f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightHand: {fileID: 8874322816003834967}
-  firePoint: {fileID: 1674855081431786122}
-  laserLight: {fileID: 5970217535836732588}
-  laserEnableTime: 0.05
-  fireRate: 1.5
 --- !u!114 &1496453593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5256,6 +5239,24 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  characterStats: {fileID: 0}
+--- !u!114 &8890481650131467408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619955817058579299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ad6671dea734d4e95c1070154e68f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 0}
+  rightHand: {fileID: 8874322816003834967}
+  firePoint: {fileID: 1674855081431786122}
+  laserLight: {fileID: 5970217535836732588}
+  laserEnableTime: 0.05
 --- !u!4 &8874322816003834967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 19905979371358821, guid: 863ff954206bb954ea17bb4c01869157, type: 3}

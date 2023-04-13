@@ -12,6 +12,13 @@ public class CharacterData_SO : ScriptableObject
     public int maxMp;
     public int currentMp;
     public int speed;
-    
+    public Inventory_SO inventory1;
+/***
+    public int Inventory2;
+    public int Inventory3;
+    public int Inventory4;
+    public int Inventory5;
+***/
+
     //I plan to add another scriptable object to store the attack and defense individually, so no atk or def in this object
 }

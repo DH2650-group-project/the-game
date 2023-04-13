@@ -37,5 +37,11 @@ public class CharacterStats : MonoBehaviour
         set { characterData.speed = value; }
 
     }
+    public Inventory_SO inventory1
+    {
+        get { if (characterData != null) return characterData.inventory1; else return null; }
+        set { characterData.inventory1 = value; }
+    }
+
     #endregion
 }
