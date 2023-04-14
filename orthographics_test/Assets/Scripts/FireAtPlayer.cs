@@ -86,7 +86,6 @@ public class FireAtPlayer : MonoBehaviour
             return;
         }
 
-        Debug.Log("Firing");
 
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 
