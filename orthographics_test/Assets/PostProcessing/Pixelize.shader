@@ -38,9 +38,9 @@ Shader "Hidden/Pixelize"
 
         SamplerState sampler_point_clamp;
         
-        uniform float2 _BlockCount;
         uniform float2 _BlockSize;
-        uniform float2 _HalfBlockSize;
+        uniform float2 _OriginalSize;
+        
 
 
         Varyings vert(Attributes IN)
@@ -60,12 +60,22 @@ Shader "Hidden/Pixelize"
             HLSLPROGRAM
             half4 frag(Varyings IN) : SV_TARGET
             {
-                float2 blockPos = floor(IN.uv * _BlockCount);
-                float2 blockCenter = blockPos * _BlockSize + _HalfBlockSize;
+                // how many original pixels are in new pixel
+                float2 pixelSize = _OriginalSize / _BlockSize;
 
-                float4 tex = SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, blockCenter);
 
-                return tex;
+                half4 color = half4(0,0,0,0);
+                // get the average color of the pixels in the new pixel
+                for (int i = 0; i < pixelSize.x; i++)
+                {
+                    for (int j = 0; j < pixelSize.y; j++)
+                    {
+                        color += SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, IN.uv + float2(i,j) * _MainTex_TexelSize.xy);
+                    }
+                }
+                color /= pixelSize.x * pixelSize.y;
+
+                return color;                
             }
             ENDHLSL
 

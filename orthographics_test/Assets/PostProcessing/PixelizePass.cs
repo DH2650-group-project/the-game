@@ -26,12 +26,11 @@ public class PixelizePass : ScriptableRenderPass
         RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
 
 
-        pixelScreenHeight = settings.screenHeight;
-        pixelScreenWidth = (int)(pixelScreenHeight * renderingData.cameraData.camera.aspect + 0.5f);
+        pixelScreenHeight = settings.pixelHeight;
+        pixelScreenWidth = (int)(pixelScreenHeight * renderingData.cameraData.camera.aspect);
 
-        material.SetVector("_BlockCount", new Vector2(pixelScreenWidth, pixelScreenHeight));
-        material.SetVector("_BlockSize", new Vector2(1.0f / pixelScreenWidth, 1.0f / pixelScreenHeight));
-        material.SetVector("_HalfBlockSize", new Vector2(0.5f / pixelScreenWidth, 0.5f / pixelScreenHeight));
+        material.SetVector("_BlockSize", new Vector2(pixelScreenWidth, pixelScreenHeight));
+        material.SetVector("_OriginalSize", new Vector2(descriptor.width, descriptor.height));
 
         descriptor.height = pixelScreenHeight;
         descriptor.width = pixelScreenWidth;
