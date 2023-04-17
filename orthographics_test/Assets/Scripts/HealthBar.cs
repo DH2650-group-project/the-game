@@ -28,7 +28,8 @@ public class HealthBar : MonoBehaviour
     {
         if (stats == null)
         {
-            gameObject.SetActive(false);
+            SetMaxHealth(100);
+            SetHealth(100);
             return;
         }
         SetMaxHealth(stats.maxHp);
@@ -37,6 +38,11 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
+        if (stats == null)
+        {
+            SetHealth(100);
+            return;
+        }
         SetHealth(stats.currentHp);
     }
 }
