@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    [SerializeField] GameObject prefab;
+    [SerializeField] GameObject[] prefab;
     [SerializeField] GameObject player;
     [Range(0, 100)] public int count = 10;
 
@@ -38,6 +38,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
+        GameObject prefab = this.prefab[Random.Range(0, this.prefab.Length)];
 
         Vector2 rand_pos = Random.insideUnitCircle * radius + new Vector2(player.transform.position.x, player.transform.position.z);
 

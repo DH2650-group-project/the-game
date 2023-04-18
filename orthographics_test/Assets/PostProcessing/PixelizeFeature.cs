@@ -10,12 +10,13 @@ public class PixelizeFeature : ScriptableRendererFeature
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
 
-
-        [Range(64, 2048)]
-        public int pixelHeight = 144;
+        [Range(144, 1024)]
+        public int pixelHeight = 256;
 
         public bool renderInSceneView = false;
     }
+
+
 
     [SerializeField] private CustomPassSettings settings;
     private PixelizePass customPass;
