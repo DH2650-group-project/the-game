@@ -37,21 +37,10 @@ public class FireAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         target = GameObject.FindWithTag("Player");
 
-        InvokeRepeating(nameof(Fire), 0f, 1f / fireRate);
-
-
-
     }
 
-    // when change to firerate occurs, cancel the previous invoke and start a new one
-    void OnValidate()
-    {
-        CancelInvoke(nameof(Fire));
-        InvokeRepeating(nameof(Fire), 0f, 1f / fireRate);
-    }
 
 
     void FixedUpdate()
@@ -74,16 +63,34 @@ public class FireAtPlayer : MonoBehaviour
 
         // rotate base pivot
         base_pivot.transform.rotation = Quaternion.Slerp(base_pivot.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
-
-
     }
 
-    void Fire()
+    void OnEnable()
     {
+        StartCoroutine(Fire());
+    }
+
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    IEnumerator Fire()
+    {
+
+        while (true)
+        {
+            yield return StartCoroutine(FireOnce());
+        }
+    }
+
+    IEnumerator FireOnce()
+    {
+        yield return new WaitForSeconds(1f / fireRate);
 
         if (target == null)
         {
-            return;
+            yield break;
         }
 
         Debug.Log("Firing");
@@ -108,6 +115,8 @@ public class FireAtPlayer : MonoBehaviour
         {
             Debug.Log("Target out of range");
         }
+
+        yield return null;
     }
 
 }
