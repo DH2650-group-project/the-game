@@ -47,6 +47,8 @@ public class ProceduralAnimator : MonoBehaviour
 
     private bool any_leg_moving;
 
+    private Rigidbody rb;
+
     void Start()
     {
 
@@ -64,6 +66,7 @@ public class ProceduralAnimator : MonoBehaviour
                 is_moving = false
             };
         }
+        rb = GetComponent<Rigidbody>();
 
         lastBodyPosition = transform.position;
         full_rest = true;
@@ -79,14 +82,19 @@ public class ProceduralAnimator : MonoBehaviour
         else if (!full_rest)
             BackToRest();
 
-        if (limbCount > 3)
-        {
-            Vector3 v1 = limbs[0].IKTarget.position - limbs[1].IKTarget.position;
-            Vector3 v2 = limbs[2].IKTarget.position - limbs[3].IKTarget.position;
-            Vector3 normal = Vector3.Cross(v1, v2);
-            Vector3 up = Vector3.Lerp(transform.up, normal, 1f / (float)(stepSmoothness + 1f));
-            // transform.up = up;
-        }
+        AngleBody();
+
+    }
+
+    void AngleBody()
+    {
+
+        Vector3 v1 = limbs[0].IKTarget.position - limbs[1].IKTarget.position;
+        Vector3 v2 = limbs[2].IKTarget.position - limbs[3].IKTarget.position;
+
+        Vector3 cross = Vector3.Cross(v1, v2);
+
+        rb.MoveRotation(Quaternion.LookRotation(transform.forward, cross));
 
     }
 
