@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
 
     public CharacterStats stats;
 
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -28,6 +29,7 @@ public class HealthBar : MonoBehaviour
     {
         if (stats == null)
         {
+            Debug.Log("Stats is null");
             gameObject.SetActive(false);
             return;
         }
@@ -37,6 +39,10 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
+        if (stats == null)
+        {
+            Destroy(gameObject);
+        }
         SetHealth(stats.currentHp);
     }
 }
