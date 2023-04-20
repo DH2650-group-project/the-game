@@ -16,7 +16,7 @@ MonoBehaviour:
   settings:
     renderPassEvent: 550
     pixelHeight: 200
-    renderInSceneView: 1
+    renderInSceneView: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

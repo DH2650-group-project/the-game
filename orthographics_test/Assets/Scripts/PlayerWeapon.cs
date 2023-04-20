@@ -22,11 +22,9 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField]
     private float laserEnableTime = 0.05f;
     private float laserTimer = 0.0f;
-
     [SerializeField]
-    [Range(0.1f, 10.0f)]
-    private float fireRate = 0.5f;
-
+    [Range (0.5f, 10.0f)]
+    private float fireRate;
     private float fireRateTimer = 0.0f;
 
     // Start is called before the first frame update
