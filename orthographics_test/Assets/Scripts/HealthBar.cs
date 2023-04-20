@@ -41,7 +41,7 @@ public class HealthBar : MonoBehaviour
     {
         if (stats == null)
         {
-            SetHealth(100);
+            Destroy(gameObject);
             return;
         }
         SetHealth(stats.currentHp);
