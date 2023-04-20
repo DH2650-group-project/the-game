@@ -7,31 +7,31 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] GameObject[] prefab;
     [SerializeField] GameObject player;
-    [Range(0, 100)] public int count = 10;
+    [Range(0, 100)] public int desired_count = 10;
 
     [SerializeField] float radius = 20;
 
 
 
-    private List<GameObject> enemies;
+    private GameObject[] enemies;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemies = new();
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     void Update()
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if (enemies.Count < count)
+        if (enemies.Length < desired_count)
         {
             Spawn();
         }
-        else if (enemies.Count > count)
+        else if (enemies.Length > desired_count)
         {
             Destroy(enemies[0]);
-            enemies.RemoveAt(0);
         }
 
     }
@@ -49,7 +49,6 @@ public class Spawner : MonoBehaviour
         GameObject enemy = Instantiate(prefab, spawn_pos, look_at_player);
         enemy.GetComponent<FollowPlayer>().player = player;
 
-        enemies.Add(enemy);
 
     }
 

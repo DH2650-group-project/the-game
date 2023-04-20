@@ -31,7 +31,7 @@ public class FireAtPlayer : MonoBehaviour
     private Vector3 fire_direction;
 
 
-
+    [SerializeField] private bool friendlyFire = false;
 
 
     // Start is called before the first frame update
@@ -86,7 +86,6 @@ public class FireAtPlayer : MonoBehaviour
             return;
         }
 
-        Debug.Log("Firing");
 
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 
@@ -95,8 +94,14 @@ public class FireAtPlayer : MonoBehaviour
 
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
-            projectile.GetComponent<DamageProjectile>().damage = bulletDamage;
-            projectile.GetComponent<DamageProjectile>().targetableLayerMask = LayerMask.GetMask("Player");
+            DamageProjectile damageProjectile = projectile.GetComponent<DamageProjectile>();
+            damageProjectile.damage = bulletDamage;
+            damageProjectile.targetableLayerMask = LayerMask.GetMask("Player");
+            if (friendlyFire)
+            {
+                damageProjectile.targetableLayerMask = LayerMask.GetMask("Enemy");
+            }
+            damageProjectile.owner = gameObject;
 
             Vector3 direction = -gun_pivot.transform.right;
             projectile.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;

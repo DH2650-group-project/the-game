@@ -14,6 +14,8 @@ public class DamageProjectile : MonoBehaviour
     [SerializeField]
     List<GameObject> hitEffectParticles;
 
+    public GameObject owner;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +28,8 @@ public class DamageProjectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject == gameObject || other.gameObject == owner)
+            return;
 
         // TODO: if other is a targetable object, deal damage to it
         if (targetableLayerMask == (targetableLayerMask | (1 << other.gameObject.layer)))
