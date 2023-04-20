@@ -729,11 +729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416513198150819723, guid: f978e508e01376441881f2b79a981a8d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 168
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 2416513198150819723, guid: f978e508e01376441881f2b79a981a8d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1722
+      value: 774
       objectReference: {fileID: 0}
     - target: {fileID: 2416513198805639508, guid: f978e508e01376441881f2b79a981a8d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -993,7 +993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bf1985d953d4142b3e714fe8e74214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7559046225120060788, guid: 212874c82fb005140b32c897bc2e2d70, type: 3}
+  prefab:
+  - {fileID: 7559046225120060788, guid: 212874c82fb005140b32c897bc2e2d70, type: 3}
+  - {fileID: 2097313818793043531, guid: a758b089626255b42abad6f54f974409, type: 3}
   player: {fileID: 1177453469}
   desired_count: 10
   radius: 20
