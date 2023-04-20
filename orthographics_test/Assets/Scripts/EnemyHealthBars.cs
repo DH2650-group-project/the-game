@@ -9,7 +9,6 @@ public class EnemyHealthBars : MonoBehaviour
     public GameObject healthBarPrefab;
 
     private HashSet<GameObject> trackedEnemies;
-
     void Start()
     {
         trackedEnemies = new();
