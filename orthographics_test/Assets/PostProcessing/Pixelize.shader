@@ -70,7 +70,7 @@ Shader "Hidden/Pixelize"
                 {
                     for (int j = 0; j < pixelSize.y; j++)
                     {
-                        color += SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, IN.uv + (float2(i,j) * _MainTex_TexelSize.xy) / _BlockSize);
+                        color += SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, IN.uv + (float2(i,j) * _MainTex_TexelSize.xy));
                     }
                 }
                 color /= (pixelSize.x * pixelSize.y);
