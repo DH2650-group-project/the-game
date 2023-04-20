@@ -50,31 +50,35 @@ public class PlayerWeapon : MonoBehaviour
         lineRenderer.SetPosition(0, firePoint.position);
         laserTimer = laserEnableTime;
 
-        if(Physics.Raycast(ray, out hit, 20.0f))
+        if (Physics.Raycast(ray, out hit, 20.0f))
         {
-            
+
             lineRenderer.SetPosition(1, hit.point);
+            if (hit.collider.gameObject.tag == "Enemy")
+            {
+                hit.collider.gameObject.GetComponent<CharacterStats>().TakeDamage(10);
+            }
         }
         else
         {
-            lineRenderer.SetPosition(1, ray.GetPoint(20.0f));    
+            lineRenderer.SetPosition(1, ray.GetPoint(20.0f));
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         laserTimer -= Time.deltaTime;
         fireRateTimer -= Time.deltaTime;
 
-        if(laserTimer <= 0.0f)
+        if (laserTimer <= 0.0f)
         {
             lineRenderer.enabled = false;
             laserLight.enabled = false;
-        } 
+        }
 
-        if(Input.GetKey(KeyCode.Space) && fireRateTimer <= 0.0f)
+        if (Input.GetKey(KeyCode.Space) && fireRateTimer <= 0.0f)
         {
             Shoot();
             fireRateTimer = 1.0f / fireRate;
