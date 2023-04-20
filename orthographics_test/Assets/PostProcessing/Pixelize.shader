@@ -61,7 +61,7 @@ Shader "Hidden/Pixelize"
             half4 frag(Varyings IN) : SV_TARGET
             {
                 // how many original pixels are in new pixel
-                float2 pixelSize = _OriginalSize / _BlockSize;
+                float2 pixelSize = floor(_OriginalSize / _BlockSize);
 
 
                 half4 color = half4(0,0,0,0);
@@ -70,10 +70,16 @@ Shader "Hidden/Pixelize"
                 {
                     for (int j = 0; j < pixelSize.y; j++)
                     {
-                        color += SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, IN.uv + float2(i,j) * _MainTex_TexelSize.xy);
+                        color += SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, IN.uv + (float2(i,j) * _MainTex_TexelSize.xy) / _BlockSize);
                     }
                 }
-                color /= pixelSize.x * pixelSize.y;
+                color /= (pixelSize.x * pixelSize.y);
+
+
+
+                // edge detection and outline
+
+                
 
                 return color;                
             }

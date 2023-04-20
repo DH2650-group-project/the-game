@@ -29,6 +29,9 @@ public class PixelizePass : ScriptableRenderPass
         pixelScreenHeight = settings.pixelHeight;
         pixelScreenWidth = (int)(pixelScreenHeight * renderingData.cameraData.camera.aspect);
 
+        pixelScreenHeight = Mathf.Clamp(pixelScreenHeight, pixelScreenHeight, descriptor.height);
+        pixelScreenWidth = Mathf.Clamp(pixelScreenWidth, pixelScreenWidth, descriptor.width);
+
         material.SetVector("_BlockSize", new Vector2(pixelScreenWidth, pixelScreenHeight));
         material.SetVector("_OriginalSize", new Vector2(descriptor.width, descriptor.height));
 
