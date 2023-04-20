@@ -727,6 +727,14 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2416513198150819723, guid: f978e508e01376441881f2b79a981a8d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 168
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416513198150819723, guid: f978e508e01376441881f2b79a981a8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1722
+      objectReference: {fileID: 0}
     - target: {fileID: 2416513198805639508, guid: f978e508e01376441881f2b79a981a8d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -987,5 +995,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7559046225120060788, guid: 212874c82fb005140b32c897bc2e2d70, type: 3}
   player: {fileID: 1177453469}
-  count: 1
+  desired_count: 10
   radius: 20
