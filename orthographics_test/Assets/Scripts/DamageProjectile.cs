@@ -11,6 +11,9 @@ public class DamageProjectile : MonoBehaviour
     // When the projectile is spawned by the player, it should only hit enemies
     public LayerMask targetableLayerMask;
 
+    [SerializeField]
+    List<GameObject> hitEffectParticles;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,11 +26,16 @@ public class DamageProjectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         // TODO: if other is a targetable object, deal damage to it
         if (targetableLayerMask == (targetableLayerMask | (1 << other.gameObject.layer)))
         {
             other.GetComponent<CharacterStats>().TakeDamage(damage);
-            Destroy(gameObject);
         }
+
+        Destroy(gameObject);
+        Vector3 hit = other.ClosestPoint(transform.position);
+        GameObject hitEffectParticle = hitEffectParticles[Random.Range(0, hitEffectParticles.Count)];
+        Instantiate(hitEffectParticle, hit, Quaternion.identity);
     }
 }
