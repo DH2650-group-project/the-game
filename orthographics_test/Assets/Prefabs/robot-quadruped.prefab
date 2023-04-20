@@ -1528,6 +1528,7 @@ MonoBehaviour:
   bulletDamage: 1
   firingRange: 10
   rotationSpeed: 8
+  friendlyFire: 1
 --- !u!54 &5699386707904015542
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1585,6 +1586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fc378120610d54891104845ce4e944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect:
+  - {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!1 &7847469720118547290
 GameObject:
   m_ObjectHideFlags: 0

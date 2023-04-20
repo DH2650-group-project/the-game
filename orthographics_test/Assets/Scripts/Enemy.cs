@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 
     CharacterStats stats;
 
+    [SerializeField] private List<GameObject> deathEffect;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
         if (stats.currentHp <= 0)
         {
             Destroy(gameObject);
+            Instantiate(deathEffect[Random.Range(0, deathEffect.Count)], transform.position, Quaternion.identity);
         }
     }
 }

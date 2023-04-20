@@ -11,8 +11,6 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] float radius = 20;
 
-
-
     private GameObject[] enemies;
 
     // Start is called before the first frame update

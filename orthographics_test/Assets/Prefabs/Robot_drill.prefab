@@ -495,8 +495,8 @@ GameObject:
   - component: {fileID: -939373380291077920}
   - component: {fileID: 4223755955380521513}
   - component: {fileID: 8738503366659834196}
-  - component: {fileID: 6499787082187390668}
-  - component: {fileID: 832212871354890519}
+  - component: {fileID: 1589088044212579406}
+  - component: {fileID: 2106439990985848993}
   m_Layer: 6
   m_Name: Robot_drill
   m_TagString: Enemy
@@ -562,21 +562,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8453979, y: 1.5407398, z: 0.7529605}
-  m_Center: {x: -0.0003542602, y: 0.72909296, z: -0.0060747564}
---- !u!114 &6499787082187390668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097313818793043531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fc378120610d54891104845ce4e944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &832212871354890519
+  m_Size: {x: 0.8453979, y: 2.136254, z: 0.7529605}
+  m_Center: {x: -0.0003542602, y: 1.0268501, z: -0.0060747564}
+--- !u!114 &1589088044212579406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,6 +580,20 @@ MonoBehaviour:
   currentHp: 10
   maxMp: 100
   currentMp: 100
+--- !u!114 &2106439990985848993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097313818793043531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fc378120610d54891104845ce4e944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect:
+  - {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!1 &2436744108065205969
 GameObject:
   m_ObjectHideFlags: 0
