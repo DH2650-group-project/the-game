@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed = dashSpeed;
             dashTimer = dashDuration;
+            dashEffect.transform.LookAt(transform.position - rb.velocity);
             dashEffect.Play();
         }
         dashTimer -= Time.deltaTime;
@@ -63,7 +64,14 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity *= currentSpeed;
 
-        transform.LookAt(transform.position + rb.velocity);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new Plane(Vector3.up, transform.position);
+        groundPlane.Raycast(ray, out float rayDistance);
+        Vector3 point = ray.GetPoint(rayDistance);
+
+        if((point - transform.position).sqrMagnitude > 0.2)
+            transform.LookAt(point);
+
 
         anim.SetFloat("speed", rb.velocity.sqrMagnitude);
 
