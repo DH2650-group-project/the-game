@@ -56,7 +56,7 @@ public class PlayerWeapon : MonoBehaviour
             lineRenderer.SetPosition(1, hit.point);
             if (hit.collider.gameObject.tag == "Enemy")
             {
-                hit.collider.gameObject.GetComponent<CharacterStats>().TakeDamage(10);
+                hit.collider.gameObject.GetComponent<BasicStats>().TakeDamage(10);
             }
         }
         else
