@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 8738503366659834196}
   - component: {fileID: 1589088044212579406}
   - component: {fileID: 2106439990985848993}
+  - component: {fileID: 1928955231700757203}
   m_Layer: 6
   m_Name: Robot_drill
   m_TagString: Enemy
@@ -594,6 +595,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect:
   - {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
+--- !u!114 &1928955231700757203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097313818793043531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeeb366feef9af64ba8e20b0f1daf00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot_table:
+  - {fileID: 11400000, guid: 5e5c08e2805497346953a1bdfacd3224, type: 2}
+  itemDrop: {fileID: 8358869537749926953, guid: b91a687804fb54b4f8b8c99674fd4962, type: 3}
+  dropChance: 0.1
 --- !u!1 &2436744108065205969
 GameObject:
   m_ObjectHideFlags: 0
