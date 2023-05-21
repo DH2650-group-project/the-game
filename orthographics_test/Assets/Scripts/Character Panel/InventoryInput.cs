@@ -8,10 +8,8 @@ public class InventoryInput : MonoBehaviour
     [SerializeField] KeyCode[] toggleInventoryKeys;
     [SerializeField] bool showAndHideMouse = true;
 
-    private void Awake()
-    {
-        characterPanelGameObject.SetActive(!characterPanelGameObject.activeSelf);
-    }
+
+
     void Update()
     {
         ToggleCharacterPanel();
