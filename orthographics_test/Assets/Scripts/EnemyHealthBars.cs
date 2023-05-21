@@ -26,7 +26,7 @@ public class EnemyHealthBars : MonoBehaviour
                 trackedEnemies.Add(enemies[i]);
                 GameObject healthBar = Instantiate(healthBarPrefab, transform);
                 healthBar.GetComponent<UIFollowObject>().target = enemies[i];
-                healthBar.GetComponent<HealthBar>().stats = enemies[i].GetComponent<CharacterStats>();
+                healthBar.GetComponent<HealthBar>().stats = enemies[i].GetComponent<BasicStats>();
                 healthBar.SetActive(true);
             }
         }

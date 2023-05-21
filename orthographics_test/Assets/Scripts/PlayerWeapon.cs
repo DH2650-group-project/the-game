@@ -23,7 +23,7 @@ public class PlayerWeapon : MonoBehaviour
     private float laserEnableTime = 0.05f;
     private float laserTimer = 0.0f;
     [SerializeField]
-    [Range (0.5f, 10.0f)]
+    [Range(0.5f, 10.0f)]
     private float fireRate;
     private float fireRateTimer = 0.0f;
 
@@ -54,9 +54,9 @@ public class PlayerWeapon : MonoBehaviour
         {
 
             lineRenderer.SetPosition(1, hit.point);
-            if (hit.collider.gameObject.tag == "Enemy")
+            if (hit.collider.gameObject.CompareTag("Enemy"))
             {
-                hit.collider.gameObject.GetComponent<CharacterStats>().TakeDamage(10);
+                hit.collider.gameObject.GetComponent<BasicStats>().TakeDamage(10);
             }
         }
         else

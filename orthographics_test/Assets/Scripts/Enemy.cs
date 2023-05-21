@@ -5,13 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    CharacterStats stats;
+    BasicStats stats;
 
     [SerializeField] private List<GameObject> deathEffect;
 
     void Start()
     {
-        stats = GetComponent<CharacterStats>();
+        stats = GetComponent<BasicStats>();
     }
 
     // Update is called once per frame

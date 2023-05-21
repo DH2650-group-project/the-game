@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c896565b734b104f8c3c04bd3e7e7f8, type: 3}
+  m_Name: WheelTest
+  m_EditorClassIdentifier: 
+  id: 39efdf84aa0c9264ea2bd79e08c37e3a
+  ItemName: 
+  Icon: {fileID: 21300000, guid: aee9fd3fdc44a3741ab881b3ebf2ade9, type: 3}
+  MaximumStacks: 1
+  StatsABonus: 10
+  StatsBBonus: 10
+  StatsCBonus: 10
+  StatsDBonus: 10
+  StatsAPercentBonus: 10
+  StatsBPercentBonus: 10
+  StatsCPercentBonus: 10
+  StatsDPercentBonus: 10
+  EquipmentType: 3

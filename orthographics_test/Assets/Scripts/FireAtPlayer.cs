@@ -106,7 +106,7 @@ public class FireAtPlayer : MonoBehaviour
             damageProjectile.targetableLayerMask = LayerMask.GetMask("Player");
             if (friendlyFire)
             {
-                damageProjectile.targetableLayerMask = LayerMask.GetMask("Enemy");
+                damageProjectile.targetableLayerMask |= LayerMask.GetMask("Enemy");
             }
             damageProjectile.owner = gameObject;
 
@@ -118,7 +118,7 @@ public class FireAtPlayer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Target out of range");
+            // Debug.Log("Target out of range");
         }
 
         yield return null;

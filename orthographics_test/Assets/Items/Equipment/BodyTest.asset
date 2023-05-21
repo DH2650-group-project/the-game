@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c896565b734b104f8c3c04bd3e7e7f8, type: 3}
+  m_Name: BodyTest
+  m_EditorClassIdentifier: 
+  id: 1818ae4266b9483429dfb62ac2dc3dca
+  ItemName: 
+  Icon: {fileID: 21300000, guid: 9daf94f1ae3992e4bafc6481d484c83e, type: 3}
+  MaximumStacks: 1
+  StatsABonus: 10
+  StatsBBonus: 10
+  StatsCBonus: 10
+  StatsDBonus: 10
+  StatsAPercentBonus: 10
+  StatsBPercentBonus: 10
+  StatsCPercentBonus: 10
+  StatsDPercentBonus: 10
+  EquipmentType: 0
