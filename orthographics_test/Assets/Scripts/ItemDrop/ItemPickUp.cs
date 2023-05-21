@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    public EquippableItem_SO item;
+    public EquippableItem item;
 
     private void OnTriggerEnter(Collider other)
     {
-        Inventory inventory = other.GetComponent<Inventory>();
-        if(inventory != null)
+        Character character = other.GetComponent<Character>();
+
+        if (character != null)
         {
-            if (inventory.AddItem(item))
+            Inventory inventory = character.Inventory;
+            if (inventory != null)
             {
-                Destroy(gameObject);
+                if (inventory.AddItem(item))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }

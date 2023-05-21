@@ -1602,9 +1602,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot_table:
-  - item: {fileID: 11400000, guid: 7be958c27cbe5a440b6aeca7e6be2837, type: 2}
+  - item: {fileID: 11400000, guid: 1818ae4266b9483429dfb62ac2dc3dca, type: 2}
     dropChance: 0.1
-  - item: {fileID: 11400000, guid: 5e5c08e2805497346953a1bdfacd3224, type: 2}
+  - item: {fileID: 11400000, guid: 87abfc26254c1f647b3ba1de91a70179, type: 2}
     dropChance: 0.01
   itemDrop: {fileID: 8358869537749926953, guid: b91a687804fb54b4f8b8c99674fd4962, type: 3}
 --- !u!1 &7847469720118547290

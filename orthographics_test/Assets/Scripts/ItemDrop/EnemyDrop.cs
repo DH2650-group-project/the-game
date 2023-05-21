@@ -8,9 +8,9 @@ public class EnemyDrop : MonoBehaviour
     [Serializable]
     public struct DropPair
     {
-        public EquippableItem_SO item;
+        public EquippableItem item;
         public float dropChance;
-        public DropPair(EquippableItem_SO item, float dropChance)
+        public DropPair(EquippableItem item, float dropChance)
         {
             this.item = item;
             this.dropChance = dropChance;
@@ -29,11 +29,11 @@ public class EnemyDrop : MonoBehaviour
         float dropRoll = UnityEngine.Random.Range(0f, 1f);
         int lowest = -1;
 
-        for (int i = 0; i < loot_table.Length; i++) 
+        for (int i = 0; i < loot_table.Length; i++)
         {
-            if(dropRoll <= loot_table[i].dropChance)
+            if (dropRoll <= loot_table[i].dropChance)
             {
-                if(lowest == -1)
+                if (lowest == -1)
                 {
                     lowest = i;
                 }
@@ -44,7 +44,7 @@ public class EnemyDrop : MonoBehaviour
             }
         }
 
-        if(lowest != -1)
+        if (lowest != -1)
         {
             GameObject drop = Instantiate(itemDrop, transform.position, Quaternion.identity);
             drop.GetComponent<ItemPickUp>().item = loot_table[lowest].item;
