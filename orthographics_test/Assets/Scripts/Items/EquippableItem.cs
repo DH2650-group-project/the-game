@@ -12,15 +12,15 @@ public enum EquipmentType
 [CreateAssetMenu(menuName = "Items/Equippable Item")]
 public class EquippableItem : Item
 {
-    public int StatsABonus;
-    public int StatsBBonus;
-    public int StatsCBonus;
-    public int StatsDBonus;
+    public int HPBonus;
+    public int EnergyBonus;
+    public int DamageBonus;
+    public int SpeedBonus;
     [Space]
-    public float StatsAPercentBonus;
-    public float StatsBPercentBonus;
-    public float StatsCPercentBonus;
-    public float StatsDPercentBonus;
+    public float HPPercentBonus;
+    public float EnergyPercentBonus;
+    public float DamagePercentBonus;
+    public float SpeedPercentBonus;
     [Space]
     public EquipmentType EquipmentType;
 
@@ -36,31 +36,31 @@ public class EquippableItem : Item
 
     public void Equip(Character c)
     {
-        if (StatsABonus != 0)
-            c.StatsA.AddModifier(new StatModifier(StatsABonus, StatModType.Flat, this));
-        if (StatsBBonus != 0)
-            c.StatsB.AddModifier(new StatModifier(StatsBBonus, StatModType.Flat, this));
-        if (StatsCBonus != 0)
-            c.StatsC.AddModifier(new StatModifier(StatsCBonus, StatModType.Flat, this));
-        if (StatsDBonus != 0)
-            c.StatsD.AddModifier(new StatModifier(StatsDBonus, StatModType.Flat, this));
+        if (HPBonus != 0)
+            c.HP.AddModifier(new StatModifier(HPBonus, StatModType.Flat, this));
+        if (EnergyBonus != 0)
+            c.Energy.AddModifier(new StatModifier(EnergyBonus, StatModType.Flat, this));
+        if (DamageBonus != 0)
+            c.Damage.AddModifier(new StatModifier(DamageBonus, StatModType.Flat, this));
+        if (SpeedBonus != 0)
+            c.Speed.AddModifier(new StatModifier(SpeedBonus, StatModType.Flat, this));
 
-        if (StatsAPercentBonus != 0)
-            c.StatsA.AddModifier(new StatModifier(StatsAPercentBonus, StatModType.PercentMult, this));
-        if (StatsBPercentBonus != 0)
-            c.StatsB.AddModifier(new StatModifier(StatsBPercentBonus, StatModType.PercentMult, this));
-        if (StatsCPercentBonus != 0)
-            c.StatsC.AddModifier(new StatModifier(StatsCPercentBonus, StatModType.PercentMult, this));
-        if (StatsDPercentBonus != 0)
-            c.StatsD.AddModifier(new StatModifier(StatsDPercentBonus, StatModType.PercentMult, this));
+        if (HPPercentBonus != 0)
+            c.HP.AddModifier(new StatModifier(HPPercentBonus, StatModType.PercentMult, this));
+        if (EnergyPercentBonus != 0)
+            c.Energy.AddModifier(new StatModifier(EnergyPercentBonus, StatModType.PercentMult, this));
+        if (DamagePercentBonus != 0)
+            c.Damage.AddModifier(new StatModifier(DamagePercentBonus, StatModType.PercentMult, this));
+        if (SpeedPercentBonus != 0)
+            c.Speed.AddModifier(new StatModifier(SpeedPercentBonus, StatModType.PercentMult, this));
     }
 
     public void Unequip(Character c)
     {
-        c.StatsA.RemoveAllModifiersFromSource(this);
-        c.StatsB.RemoveAllModifiersFromSource(this);
-        c.StatsC.RemoveAllModifiersFromSource(this);
-        c.StatsD.RemoveAllModifiersFromSource(this);
+        c.HP.RemoveAllModifiersFromSource(this);
+        c.Energy.RemoveAllModifiersFromSource(this);
+        c.Damage.RemoveAllModifiersFromSource(this);
+        c.Speed.RemoveAllModifiersFromSource(this);
     }
 
     public override string GetItemType()
@@ -71,15 +71,15 @@ public class EquippableItem : Item
     public override string GetDescription()
     {
         sb.Length = 0;
-        AddStat(StatsABonus, "StatsA");
-        AddStat(StatsBBonus, "StatsB");
-        AddStat(StatsCBonus, "StatsC");
-        AddStat(StatsDBonus, "StatsD");
+        AddStat(HPBonus, "HP");
+        AddStat(EnergyBonus, "Energy");
+        AddStat(DamageBonus, "Damage");
+        AddStat(SpeedBonus, "Speed");
 
-        AddStat(StatsAPercentBonus, "StatsA", isPercent: true);
-        AddStat(StatsBPercentBonus, "StatsB", isPercent: true);
-        AddStat(StatsCPercentBonus, "StatsC", isPercent: true);
-        AddStat(StatsDPercentBonus, "StatsD", isPercent: true);
+        AddStat(HPPercentBonus, "HP", isPercent: true);
+        AddStat(EnergyPercentBonus, "Energy", isPercent: true);
+        AddStat(DamagePercentBonus, "Damage", isPercent: true);
+        AddStat(SpeedPercentBonus, "Speed", isPercent: true);
 
         return sb.ToString();
     }
