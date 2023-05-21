@@ -40553,14 +40553,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 50
-  StatsA:
-    BaseValue: 10
-  StatsB:
-    BaseValue: 10
-  StatsC:
-    BaseValue: 10
-  StatsD:
-    BaseValue: 10
+  HP:
+    BaseValue: 0
+  Energy:
+    BaseValue: 0
+  Damage:
+    BaseValue: 0
+  Speed:
+    BaseValue: 0
   Inventory: {fileID: 1612574733732258975}
   EquipmentPanel: {fileID: 1612532540871136505}
   craftingWindow: {fileID: 1612710850456076966}
