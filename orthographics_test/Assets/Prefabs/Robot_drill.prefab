@@ -608,9 +608,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot_table:
-  - {fileID: 11400000, guid: 5e5c08e2805497346953a1bdfacd3224, type: 2}
+  - item: {fileID: 11400000, guid: 7be958c27cbe5a440b6aeca7e6be2837, type: 2}
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 7ce310a860fd72a4d8c8cbf74284baa3, type: 2}
+    dropChance: 0.1
+  - item: {fileID: 11400000, guid: af8cc9deb6882364ca6acb33b4ab1a45, type: 2}
+    dropChance: 0.01
   itemDrop: {fileID: 8358869537749926953, guid: b91a687804fb54b4f8b8c99674fd4962, type: 3}
-  dropChance: 0.1
 --- !u!1 &2436744108065205969
 GameObject:
   m_ObjectHideFlags: 0
