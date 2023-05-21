@@ -16,15 +16,26 @@ public class Spawner : MonoBehaviour
     private GameObject[] enemies;
 
 
+    [SerializeField] int time_before_spawn = 10;
+
+    private float time_at_start;
+
 
     // Start is called before the first frame update
     void Start()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        time_at_start = Time.time;
+
     }
 
     void Update()
     {
+        if (Time.time < time_at_start + time_before_spawn)
+        {
+            return;
+        }
+
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (enemies.Length < desired_count)
