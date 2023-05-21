@@ -34,7 +34,7 @@ public class DamageProjectile : MonoBehaviour
         // TODO: if other is a targetable object, deal damage to it
         if (targetableLayerMask == (targetableLayerMask | (1 << other.gameObject.layer)))
         {
-            other.GetComponent<CharacterStats>().TakeDamage(damage);
+            other.GetComponent<BasicStats>().TakeDamage(damage);
         }
 
         Destroy(gameObject);

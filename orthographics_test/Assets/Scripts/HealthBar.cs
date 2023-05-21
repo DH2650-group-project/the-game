@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public CharacterStats stats;
+    public BasicStats stats;
 
 
     public void SetMaxHealth(int health)
