@@ -16,12 +16,12 @@ MonoBehaviour:
   ItemName: 
   Icon: {fileID: 21300000, guid: aee9fd3fdc44a3741ab881b3ebf2ade9, type: 3}
   MaximumStacks: 1
-  StatsABonus: 10
-  StatsBBonus: 10
-  StatsCBonus: 10
-  StatsDBonus: 10
-  StatsAPercentBonus: 10
-  StatsBPercentBonus: 10
-  StatsCPercentBonus: 10
-  StatsDPercentBonus: 10
+  HPBonus: 20
+  EnergyBonus: 0
+  DamageBonus: 0
+  SpeedBonus: 0
+  HPPercentBonus: 0
+  EnergyPercentBonus: 0
+  DamagePercentBonus: 0
+  SpeedPercentBonus: 0
   EquipmentType: 3
