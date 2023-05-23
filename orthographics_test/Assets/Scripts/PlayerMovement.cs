@@ -24,10 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     private float currentSpeed;
 
+    private Character playerCharacter;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        playerCharacter = GetComponent<Character>();
 
         currentSpeed = speed;
     }
@@ -36,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
             anim.SetTrigger("Shoot");
+
+        speed = 6.0f + (float)playerCharacter.Speed.Value / 10.0f;
+        dashSpeed = 12.0f + (float)playerCharacter.Speed.Value / 10.0f;
 
         if (dashTimer <= 0.0f)
             currentSpeed = speed;
