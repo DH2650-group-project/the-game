@@ -7,4 +7,4 @@ To survive, players will need to utilize a variety of combat skills and strategi
 ![image1](CB1.png)
 ![image2](CB2.png)
 
-[![Trailer](https://example.com/link-to-image)]
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=Art4-wIBxCc" frameborder="0" allowfullscreen></iframe>
