@@ -7,4 +7,13 @@ To survive, players will need to utilize a variety of combat skills and strategi
 ![image1](CB1.png)
 ![image2](CB2.png)
 
+## Trailer
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Art4-wIBxCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Game Developers
+- David  ̊Asberg dasberg@kth.se
+- Jesper Lidbaum jlidbaum@kth.se
+- Zhongyue Wu zhongyue@kth.se 
+- Laila Arman lailaa@kth.se
+- Wanqing Zhou wanqingz@kth.se
