@@ -4,5 +4,5 @@ Players will take on the role of a powerful universal model cyborg, who can acce
 
 To survive, players will need to utilize a variety of combat skills and strategies, including close-quarters combat, ranged attacks, and stealth. They will also be able to customize and upgrade their cyborg's abilities and equipment, choosing from a wide range of upgrades and gear options to suit their playstyle.
 
-![image1](.CyborgGame.png)
-![image2](.CyborgGame2.png)
+![image1](CyborgGame.png)
+![image2](CyborgGame2.png)
